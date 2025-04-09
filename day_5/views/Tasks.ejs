@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+        <div class="b">
+            <table border="1" width="70%">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Tasks</th>
+                        <th colspan="2">Time</th>
+                        <th colspan="2" width="15%">Action</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <%task.map((e,i)=>{ %>
+                                <tr>
+                                <td><%=e.id%></td>
+                                <td><%=e.task%></td>
+                                <td><%=e.intial%></td>
+                                <td><%=e.complition%></td>
+                                <td> <center><a href="/editaData?id=<%=e.id%>"><button>Edit</button></a></center></td>
+                                <td><center><a href="/deleteData?id=<%=e.id%>"><button>Delete</button></a></center></td>
+                                </tr>
+                           <%})%>
+                    
+                        </tr>
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+</body>
+</html>
